@@ -14,7 +14,7 @@ RUN curl -fsSL http://archive.apache.org/dist/maven/maven-3/$MAVEN_VERSION/binar
   && mv /usr/share/apache-maven-$MAVEN_VERSION /usr/share/maven \
   && ln -s /usr/share/maven/bin/mvn /usr/bin/mvn
 
-ENV MAVEN_HOME = /usr/share/maven
+ENV MAVEN_HOME=/usr/share/maven
 ENV PATH=${MAVEN_HOME}/bin:${PATH}
 
 RUN mkdir -p /root/work/
