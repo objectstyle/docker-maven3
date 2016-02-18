@@ -4,10 +4,8 @@ MAINTAINER Andrus Adamchik <andrus at objectstyle dot com>
 
 LABEL name=objectstyle-maven3
 
-RUN yum -y install tar \
-	yum -y install git \
-	&& yum -y update \
-	&& yum clean all 
+RUN yum -y install tar;	yum -y install git
+RUN yum -y update; yum clean all 
 
 ENV MAVEN_VERSION 3.3.3
 RUN curl -fsSL http://archive.apache.org/dist/maven/maven-3/$MAVEN_VERSION/binaries/apache-maven-$MAVEN_VERSION-bin.tar.gz | tar xzf - -C /usr/share \
